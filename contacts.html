@@ -2,51 +2,188 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>D. E. DrumShop</title>
+    <title>Контакты | D.E.Drumshop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
-    <h1>D. E. DrumShop</h1>
-    <p>Барабанный интернет-магазин, сделанный барабанщиками для барабанщиков</p>
-    <hr>
-    <h3>МЕНЮ</h3>
-    <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-    </ul>
-    <hr>
-    <h2>Напишите нам</h2>
-    <form class="feedback" action="#" method="post">
-        <fieldset>
-            <div>
-                <input type = "text" size = "30" placeholder = "Ваше Имя">
-            </div>
-            <div>
-                <input type = "email" size = "30" placeholder = "Ваш E-mail">
-            </div>
-            <div>
-                <input type = "text" size = "30" placeholder = "Тема">
-            </div>
-            <div>
-                <textarea name="message" rows="8" cols="80" placeholder = "Сообщение"></textarea>
-            </div>
-            <input type = "submit" value = "Отправить">
-            <input type = "reset" value = "Очистить">
-        </fieldset>
-    </form>
+    <div class="container">
 
-    <h2>Адрес</h2>
-    <ul>
-        <li><b>Звоните:</b> +7 (012) 345-67-89</li>
-        <li><b>Пишите:</b> example@dedrumshop.com</li>
-        <li><b>Приходите:</b> Россия, Москва, улица Сущёвский Вал, 5с1</li>
-    </ul>
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af2bc95812f454a3d8cd16d135912d6740a833997725080cfb8aa8bfa903b2b24&amp;width=100%25&amp;height=527&amp;lang=ru_RU&amp;scroll=true"></script>
-    <hr>
-    <footer>
-        <p>
-            <em>&copy; &laquo;Все права защищены&raquo;</em>
-        </p>
-    </footer>
+        <header id="map">
+            <div class="main_logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+                <div class="social_icon contacts_social_icon">
+                    <div><a href="#"></a></div>
+                    <div><a href="#"></a></div>
+                    <div><a href="#"></a></div>
+                    <div><a href="#"></a></div>
+                    <div><a href="#"></a></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="wrapper contacts_wrapper">
+            <div class="aside">
+                <ul class="menu">
+                    <li>MENU</li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="catalog.html">CATALOG</a></li>
+                    <li><a href="#">ACCESSORIES</a></li>
+                    <li><a href="#">SALE</a></li>
+                    <li><a href="#">BRANDS</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">GADGETS</a></li>
+                    <li class="current_page"><a href="contacts.html">contacts</a></li>
+                </ul>
+                <div class="now_is_open">
+                    <p>Now is open!</p>
+                </div>
+            </div>
+            <div class="content">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="contacts.html">contact us</a></li>
+                </ul>
+                <div class="contacts">
+                    <form class="feedback" action="#" method="post">
+                        <fieldset>
+                            <label for="full_name">Full name*</label>
+                            <input id="full_name" name="full_name" type = "text" placeholder = "e.g.  robert smith" required>
+                            <label for="email">email*</label>
+                            <input id="email" name="email" type = "email" placeholder = "e.g. name@nome.com" required>
+                            <label for="company">company</label>
+                            <input id="company" name="company" type = "text" placeholder = "e.g. your company (optional)">
+                            <label for="subject">subject*</label>
+                            <input id="subject" name="subject" type = "text" placeholder = "e.g. info" required>
+                            <label for="message">message</label>
+                            <textarea id="message" name="message" placeholder = "MESSAGE"></textarea>
+                            <input type = "submit" value = "Send">
+                            <input type = "reset" value = "Reset">
+                        </fieldset>
+                    </form>
+                    <hr>
+                    <div class="address">
+                        <h2>Address</h2>
+                        <div itemscope itemtype="http://schema.org/Organization">
+                            <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <p>
+                                    <span itemprop="postalCode"> 111222</span>,
+                                    <span itemprop="addressLocality">Москва</span>,
+                                    <span itemprop="streetAddress">Сущёвский Вал, 5с1</span>
+                                </p>
+                                <p>Lorem Ipsum is simply dummy text of the printing and over</p>
+                            </div>
+                            <div class="contact_info">
+                                <i class="fa fa-phone" aria-hidden="true"></i> <span itemprop="telephone">+7 (012) 345-67-89</span>
+                            </div>
+                            <div class="contact_info">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i> <span itemprop="email">info@dedrumshop.com</span>
+                            </div>
+                            <p class="have_questions">
+                                If you have questions about your order or need any general information our customer service team will be happy to assist you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="brand">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="social">
+                <div class="fb"><a href="#"></a></div>
+                <div class="twitter"><a href="#"></a></div>
+                <div class="pinterest"><a href="#"></a></div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer_blocks">
+                <div>
+                    <h4>Category</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">eshop</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">new collections</a></li>
+                        <li><a href="#">blog</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Our Account</h4>
+                    <ul>
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Personal information</a></li>
+                        <li><a href="#">Addresses</a></li>
+                        <li><a href="#">Discount</a></li>
+                        <li><a href="#">Orders history</a></li>
+                        <li><a href="#">Addresses</a></li>
+                        <li><a href="#">Search Terms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Our Support</h4>
+                    <ul>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Search Terms</a></li>
+                        <li><a href="#">Advanced Search</a></li>
+                        <li><a href="#">Mobile</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Mobile</a></li>
+                        <li><a href="#">Addresses</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Newsletter</h4>
+                    <p>Join thousands of other people subscribe to our news</p>
+                    <form class="subscribe" action="#" method="post">
+                        <input type="email" name="email" placeholder="insert email">
+                        <input type="submit" name="submit" value="submit">
+                    </form>
+                    <div class="pay_icons">
+                        <img src="img/pay/aex.png" alt="">
+                        <img src="img/pay/mastercard.png" alt="">
+                        <img src="img/pay/maestro.png" alt="">
+                        <img src="img/pay/paypal.png" alt="">
+                        <img src="img/pay/discover.png" alt="">
+                        <img src="img/pay/visa_straight.png" alt="">
+                    </div>
+                </div>
+                <div>
+                    <h4>About Us</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                    <div itemscope itemtype="http://schema.org/Organization">
+                        <span class="phone">Phone:</span>
+                        <span itemprop="telephone">+7 (012) 345-67-89</span>
+                        <br>
+                        <span class="email">e-mail:</span>
+                        <span itemprop="email">info@dedrumshop.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2017 D.E.Drumshop. All rights reserved - Designed by <a href="https://geekbrains.ru">geekbrains.ru</a></p>
+                <div class="social_icon">
+                    <div><a href="#"></a></div>
+                    <div><a href="#"></a></div>
+                    <div><a href="#"></a></div>
+                    <div><a href="#"></a></div>
+                    <div><a href="#"></a></div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
 </body>
 </html>
